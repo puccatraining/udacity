@@ -1,0 +1,45 @@
+.pContainer {
+  width: 80%;
+  margin: auto;
+  content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.pIntro {
+  font-family: "Oswald", sans-serif;
+}
+
+a:hover {
+  color: red;
+}
+
+#vooz {
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+a.puccatxt {
+  font-weight: bold;
+}
+
+a.seasonlink {
+  color: blanchedalmond;
+}
+
+.seasons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+
+.season {
+  width: 26%;
+  background-color: black;
+  border: solid 4px red;
+  color: white;
+  padding: 4px 6px 4px 6px;
+}
