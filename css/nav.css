@@ -1,10 +1,11 @@
 .nav {
   padding: 10px;
   display: flex;
-  width: 100%;
-  justify-content: right;
-  align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: right;
+  width: 100%;
+  align-items: center;
   background-image: url("../images/nav-background.gif");
   background-repeat: no-repeat;
   background-size: cover;
