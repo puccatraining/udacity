@@ -4,11 +4,8 @@ body {
 
 .recipe {
   display: grid;
-  padding: 10px;
-  width: 100%;
-  margin: auto;
-  grid-template-rows: 360px;
-  grid-template-columns: 320px 320px 320px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 5px;
   justify-content: center;
 }
 
