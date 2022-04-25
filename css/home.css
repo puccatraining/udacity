@@ -1,6 +1,10 @@
-@import url("nav.css");
+@import url("about.css");
 @import url("footer.css");
+@import url("nav.css");
 @import url("photo.css");
+@import url("pucca.css");
+@import url("recipes.css");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Fredericka+the+Great&family=Hurricane&family=Open+Sans:wght@300&family=Oswald:wght@200&family=Rancho&display=swap");
 
 .container {
   width: 90%;
