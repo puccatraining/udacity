@@ -27,11 +27,6 @@ const navList = document.getElementById("navbar__list");
 const sections = document.querySelectorAll("section");
 console.log("section: " + sections.length);
 /**
- * End Global Variables
- * Start Helper Functions
- **/
-
-/**
  * Build the navbar
  */
 function buildNav() {
@@ -43,11 +38,12 @@ function buildNav() {
     const el = document.createElement("a");
     el.innerText = navData;
     el.classList.add("nav-items");
+    //console.log("*** " + el.classList.add("nav-items"));
     el.setAttribute("id", sectionId);
     el.href = "#" + sectionId;
     lst.appendChild(el);
     navList.appendChild(lst);
-    console.log(navData + " / " + sectionId + " / " + sectionClass);
+    //  console.log(navData + " / " + sectionId + " / " + sectionClass);
     scrollEvent(lst, section);
   });
 }
@@ -59,6 +55,7 @@ function setSectionView(section) {
 }
 
 function addClassActive() {
+  console.log("*** in addClassActive() ");
   for (section of sections) {
     console.log("**** section = " + section);
     if (setSectionView(section)) {
@@ -77,34 +74,36 @@ function addClassActive() {
   }
 }
 
-// add eventlistener.
+// add eventlistener to add active-class.
 document.addEventListener("scroll", function () {
   addClassActive();
 });
 
-// listening for tne event forthe navigation.
+// listening for tne event for the navigation.
 function scrollEvent(lst, section) {
-  console.log("** scrollEvent *** ");
-
   lst.addEventListener("click", function (e) {
     e.preventDefault();
     section.scrollIntoView({ behavior: "smooth" });
   });
 }
 
-// Add class 'active' to section when near top of viewport
+// When the user scrolls down show the button
+const button = document.getElementById("scrollToTopBttn");
 
-// When the user scrolls down then
-// slide down the navbar
-/* window.onscroll = function () {
+window.onscroll = function () {
   scroll();
-}; */
+};
 
-// Scroll to anchor ID using scrollTO event
-/* function scroll() {
+function scroll() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("navbar__list").style.top = "0";
+    button.style.display = "block";
   } else {
-    document.getElementById("navbar__list").style.top = "-60px";
+    button.style.display = "none";
   }
-} */
+}
+
+// when the user clicks on the button, scroll to the top.
+function scrollToTopBttn() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}

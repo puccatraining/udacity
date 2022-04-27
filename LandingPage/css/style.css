@@ -2,12 +2,22 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   line-height: 1.5;
+  padding-bottom: 24px;
+}
+
+footer {
+  background: black;
+  color: lightblue;
+  font-size: 8pt;
+  height: 36px;
+  text-align: center;
+  padding-top: 2px;
 }
 
 .page__header {
   background: black;
   height: 60px;
-  width: 100%;
+  padding: 20px;
 }
 
 #navbar__menu {
@@ -15,12 +25,13 @@ body {
 }
 
 #navbar__list {
+  position: fixed;
   list-style-type: none;
   color: azure;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px;
+  /* padding: 14px; */
 }
 
 #navbar__list a {
@@ -28,7 +39,6 @@ body {
   color: azure;
   font-size: 16pt;
   display: inline;
-  padding: 20px;
 }
 
 #project {
@@ -55,9 +65,19 @@ body {
   padding: 20px;
 }
 
-.page__footer {
-  font-size: 8pt;
-  text-align: center;
+#scrollToTopBttn {
+  display: none;
+  position: fixed;
+  bottom: 72px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background: black;
+  color: cornsilk;
+  font-size: 16px;
+  padding: 20px;
+  border-radius: 15px;
 }
 
 .landing__container {
@@ -69,12 +89,11 @@ section p {
   width: 70%;
 }
 
-section .active-class {
-  background: whitesmoke;
-  color: red;
+.active-class {
+  background: rgb(241, 230, 235);
 }
 
-.nav-items a:active {
-  background: whitesmoke;
+.active {
+  background: rgb(241, 230, 235);
   color: black;
 }
