@@ -16,28 +16,24 @@ footer {
 
 .page__header {
   background: black;
-  height: 60px;
-  padding: 20px;
-}
-
-#navbar__menu {
-  color: whitesmoke;
+  height: 74px;
 }
 
 #navbar__list {
+  padding-right: 20px;
   position: fixed;
   list-style-type: none;
   color: azure;
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
-  /* padding: 14px; */
+  font-size: 16pt;
 }
 
 #navbar__list a {
   text-decoration: none;
   color: azure;
-  font-size: 16pt;
   display: inline;
 }
 
@@ -96,4 +92,24 @@ section p {
 .active {
   background: rgb(241, 230, 235);
   color: black;
+}
+
+/** small screen **/
+@media screen and (max-width: 600px) {
+  #navbar__list {
+    display: inline-flex;
+    padding: 0;
+  }
+  #navbar__list li {
+    font-size: 14pt;
+  }
+
+  body {
+    width: 100%;
+    margin-left: 10px;
+  }
+
+  section p {
+    width: auto;
+  }
 }

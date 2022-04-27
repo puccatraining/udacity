@@ -43,7 +43,6 @@ function buildNav() {
     el.href = "#" + sectionId;
     lst.appendChild(el);
     navList.appendChild(lst);
-    //  console.log(navData + " / " + sectionId + " / " + sectionClass);
     scrollEvent(lst, section);
   });
 }
