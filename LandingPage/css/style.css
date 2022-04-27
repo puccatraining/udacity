@@ -1,0 +1,80 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.page__header {
+  background: black;
+  height: 60px;
+  width: 100%;
+}
+
+#navbar__menu {
+  color: whitesmoke;
+}
+
+#navbar__list {
+  list-style-type: none;
+  color: azure;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+
+#navbar__list a {
+  text-decoration: none;
+  color: azure;
+  font-size: 16pt;
+  display: inline;
+  padding: 20px;
+}
+
+#project {
+  background: palevioletred;
+  color: black;
+  padding: 20px;
+}
+
+#summary {
+  background: rgb(0, 115, 255);
+  color: black;
+  padding: 20px;
+}
+
+#build {
+  background: rgb(255, 213, 0);
+  color: black;
+  padding: 20px;
+}
+
+#learn {
+  background: rgb(138, 166, 176);
+  color: black;
+  padding: 20px;
+}
+
+.page__footer {
+  font-size: 8pt;
+  text-align: center;
+}
+
+.landing__container {
+  margin-left: 200px;
+}
+
+section p {
+  line-height: 1.8em;
+  width: 70%;
+}
+
+section .active-class {
+  background: whitesmoke;
+  color: red;
+}
+
+.nav-items a:active {
+  background: whitesmoke;
+  color: black;
+}
