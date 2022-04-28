@@ -48,16 +48,14 @@ function buildNav() {
 }
 buildNav();
 
-function setSectionView(section) {
+function isSectionView(section) {
   const location = section.getBoundingClientRect();
   return (location.top <= 150) & (location.bottom >= 150);
 }
 
 function addClassActive() {
-  console.log("*** in addClassActive() ");
   for (section of sections) {
-    console.log("**** section = " + section);
-    if (setSectionView(section)) {
+    if (isSectionView(section)) {
       // add active-class
       section.classList.add("active-class");
       document

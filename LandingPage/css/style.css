@@ -43,10 +43,22 @@ footer {
   padding: 20px;
 }
 
+ul #project:hover {
+  color: black;
+  font-weight: bolder;
+  font-style: italic;
+}
+
 #summary {
   background: rgb(0, 115, 255);
   color: black;
   padding: 20px;
+}
+
+ul #summary:hover {
+  color: black;
+  font-weight: bolder;
+  font-style: italic;
 }
 
 #build {
@@ -55,10 +67,22 @@ footer {
   padding: 20px;
 }
 
+ul #build:hover {
+  color: black;
+  font-weight: bolder;
+  font-style: italic;
+}
+
 #learn {
   background: rgb(138, 166, 176);
   color: black;
   padding: 20px;
+}
+
+ul #learn:hover {
+  color: black;
+  font-weight: bolder;
+  font-style: italic;
 }
 
 #scrollToTopBttn {
@@ -75,6 +99,10 @@ footer {
   padding: 20px;
   border-radius: 15px;
 }
+#scrollToTopBttn:hover {
+  background: white;
+  color: black;
+}
 
 .landing__container {
   margin-left: 200px;
@@ -86,12 +114,11 @@ section p {
 }
 
 .active-class {
-  background: rgb(241, 230, 235);
+  font-style: italic;
 }
 
 .active {
-  background: rgb(241, 230, 235);
-  color: black;
+  font-style: italic;
 }
 
 /** small screen **/
