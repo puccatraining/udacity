@@ -11,28 +11,22 @@ The Top button should scroll back to the top of the page.
 ## Installation
 
 Go to https://github.com/puccatraining/udacity.git and select the LandingPage folder.  To run this project, install it locally.  There are two ways to get the codes:
-<ol>
-  <li>You can download the project by click on the Code button and Download ZIP. The project is in the LandingPage folder</li>
-  <li>Open a git bash window, type: git clone https://github.com/puccatraining/udacity.git. The project is in the LandingPage folder</li>
-</ol>
+  - You can download the project by click on the Code button and Download ZIP. The project is in the LandingPage folder
+  - Open a git bash window, type: git clone https://github.com/puccatraining/udacity.git. The project is in the LandingPage folder
     
 ## How to run the Landing Page
 
 Begin from index.html. This page can be view using the following browsers:
-<ul>
-  <li>Microsoft Edge</li>
-  <li>Firefox</li>
-  <li>Googel Chrome</li>
- </ul>
- 
+- Microsoft Edge
+- Firefox
+- Googel Chrome
+
  ## Technologies
  
  The languages us for this project are:
- <ul>
-  <li>CSS</li>
-  <li>HTML</li>
-  <li>JavaScript</li>
- </ul>
+ - CSS
+ - HTML
+ - JavaScript
  
  ## Author Information
  
