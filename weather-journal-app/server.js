@@ -8,10 +8,6 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const port = 8000;
 
-// Start up an instance of app
-
-/* Middleware*/
-
 //Here we are configuring express to use body-parser as middle-ware.
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -38,7 +34,9 @@ function sendData(req, res) {
 app.post("/add", postData);
 
 function postData(req, res) {
-  projectData = req.body;
-
+  const data = req.body;
+  projectData["temp"] = data.temp;
+  projectData["feeling"] = data.feeling;
+  projectData["date"] = data.date;
   res.send(projectData);
 }

@@ -8,8 +8,6 @@ const serverData = {};
 let d = new Date();
 let newDate = d.getMonth() + "." + d.getDate() + "." + d.getFullYear();
 
-document.querySelector(".submit").addEventListener("click", performAction);
-
 function performAction(e) {
   e.preventDefault();
   const zip = document.getElementById("zip").value;
@@ -73,18 +71,10 @@ const updateUI = async (url) => {
 const createRpt = (allData) => {
   console.log("allData  = ", allData);
   // Write updated data to DOM elements
-  document.getElementById("temp").innerHTML =
-    Math.round(allData.temp) + "degrees";
   document.getElementById("content").innerHTML = allData.content;
   document.getElementById("date").innerHTML = allData.date;
+  document.getElementById("temp").innerHTML =
+    Math.round(allData.temp) + "degrees";
 };
 
-// Event listener to add function to existing HTML DOM element
-
-/* Function called by event listener */
-
-/* Function to GET Web API Data*/
-
-/* Function to POST data */
-
-/* Function to GET Project Data */
+document.querySelector(".submit").addEventListener("click", performAction);
