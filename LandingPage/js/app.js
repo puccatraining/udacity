@@ -25,7 +25,9 @@
 const navMenu = document.getElementById("#navbar__menu");
 const navList = document.getElementById("navbar__list");
 const sections = document.querySelectorAll("section");
-console.log("section: " + sections.length);
+// When the user scrolls down show the button
+const button = document.getElementById("scrollToTopBttn");
+
 /**
  * Build the navbar
  */
@@ -40,7 +42,7 @@ function buildNav() {
     el.classList.add("nav-items");
     //console.log("*** " + el.classList.add("nav-items"));
     el.setAttribute("id", sectionId);
-    el.href = "#" + sectionId;
+    // el.href = "#" + sectionId;
     lst.appendChild(el);
     navList.appendChild(lst);
     scrollEvent(lst, section);
@@ -83,9 +85,6 @@ function scrollEvent(lst, section) {
     section.scrollIntoView({ behavior: "smooth" });
   });
 }
-
-// When the user scrolls down show the button
-const button = document.getElementById("scrollToTopBttn");
 
 window.onscroll = function () {
   scroll();
