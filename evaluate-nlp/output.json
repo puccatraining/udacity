@@ -1,0 +1,205 @@
+{
+  "agreement": "AGREEMENT",
+  "confidence": "100",
+  "irony": "NONIRONIC",
+  "model": "general_en",
+  "score_tag": "N",
+  "sentence_list": [
+    {
+      "agreement": "AGREEMENT",
+      "bop": "y",
+      "confidence": "100",
+      "endp": "9",
+      "inip": "0",
+      "score_tag": "N",
+      "segment_list": [
+        {
+          "agreement": "AGREEMENT",
+          "confidence": "100",
+          "endp": "8",
+          "inip": "0",
+          "polarity_term_list": [
+            {
+              "confidence": "100",
+              "endp": "7",
+              "inip": "2",
+              "score_tag": "N",
+              "text": "error"
+            }
+          ],
+          "score_tag": "N",
+          "segment_type": "main",
+          "text": "{\"errors\""
+        },
+        {
+          "agreement": "AGREEMENT",
+          "confidence": "100",
+          "endp": "9",
+          "inip": "9",
+          "polarity_term_list": [],
+          "score_tag": "NONE",
+          "segment_type": "secondary",
+          "text": ":"
+        }
+      ],
+      "sentimented_concept_list": [],
+      "sentimented_entity_list": [],
+      "text": "{\"errors\":"
+    },
+    {
+      "agreement": "AGREEMENT",
+      "bop": "n",
+      "confidence": "100",
+      "endp": "251",
+      "inip": "10",
+      "score_tag": "NONE",
+      "segment_list": [
+        {
+          "agreement": "AGREEMENT",
+          "confidence": "100",
+          "endp": "54",
+          "inip": "10",
+          "polarity_term_list": [],
+          "score_tag": "NONE",
+          "segment_type": "secondary",
+          "sentimented_concept_list": [
+            {
+              "endp": "53",
+              "form": "application",
+              "id": "12fbb0dfc7",
+              "inip": "40",
+              "score_tag": "NONE",
+              "type": "Top\u003eProduct",
+              "variant": "Application-Id"
+            }
+          ],
+          "text": "[{\"code\":\"KB401\",\"detail\":\"`X-Application-Id`"
+        },
+        {
+          "agreement": "AGREEMENT",
+          "confidence": "100",
+          "endp": "251",
+          "inip": "59",
+          "polarity_term_list": [],
+          "score_tag": "NONE",
+          "segment_type": "secondary",
+          "sentimented_concept_list": [
+            {
+              "endp": "72",
+              "form": "application",
+              "id": "12fbb0dfc7",
+              "inip": "62",
+              "score_tag": "NONE",
+              "type": "Top\u003eProduct",
+              "variant": "Application"
+            }
+          ],
+          "sentimented_entity_list": [
+            {
+              "endp": "76",
+              "form": "Key",
+              "id": "280625077d",
+              "inip": "74",
+              "score_tag": "NONE",
+              "type": "Top\u003ePerson\u003eLastName",
+              "variant": "Key"
+            },
+            {
+              "endp": "251",
+              "form": "missing.\",\"id\":\"error401_unauthorized_missing_parameters\",\"links\":{\"about\":\"https://docs.aylien.com/newsapi/#authorization\"},\"status\":401,\"title\":\"Authentication",
+              "id": "__14875040786811079038",
+              "inip": "91",
+              "score_tag": "NONE",
+              "type": "Top\u003eId\u003eUrl",
+              "variant": "missing.\",\"id\":\"error401_unauthorized_missing_parameters\",\"links\":{\"about\":\"https://docs.aylien.com/newsapi/#authorization\"},\"status\":401,\"title\":\"Authentication"
+            }
+          ],
+          "text": "`X-Application-Key` headers are missing.\",\"id\":\"error401_unauthorized_missing_parameters\",\"links\":{\"about\":\"https://docs.aylien.com/newsapi/#authorization\"},\"status\":401,\"title\":\"Authentication"
+        }
+      ],
+      "sentimented_concept_list": [
+        {
+          "form": "application",
+          "id": "12fbb0dfc7",
+          "score_tag": "NONE",
+          "type": "Top\u003eProduct"
+        }
+      ],
+      "sentimented_entity_list": [
+        {
+          "form": "Key",
+          "id": "280625077d",
+          "score_tag": "NONE",
+          "type": "Top\u003ePerson\u003eLastName"
+        },
+        {
+          "form": "missing.\",\"id\":\"error401_unauthorized_missing_parameters\",\"links\":{\"about\":\"https://docs.aylien.com/newsapi/#authorization\"},\"status\":401,\"title\":\"Authentication",
+          "id": "__14875040786811079038",
+          "score_tag": "NONE",
+          "type": "Top\u003eId\u003eUrl"
+        }
+      ],
+      "text": "[{\"code\":\"KB401\",\"detail\":\"`X-Application-Id` or `X-Application-Key` headers are missing.\",\"id\":\"error401_unauthorized_missing_parameters\",\"links\":{\"about\":\"https://docs.aylien.com/newsapi/#authorization\"},\"status\":401,\"title\":\"Authentication"
+    },
+    {
+      "agreement": "AGREEMENT",
+      "bop": "n",
+      "confidence": "100",
+      "endp": "274",
+      "inip": "253",
+      "score_tag": "N",
+      "segment_list": [
+        {
+          "agreement": "AGREEMENT",
+          "confidence": "100",
+          "endp": "274",
+          "inip": "253",
+          "polarity_term_list": [
+            {
+              "confidence": "100",
+              "endp": "270",
+              "inip": "264",
+              "score_tag": "N",
+              "text": "miss@V"
+            }
+          ],
+          "score_tag": "N",
+          "segment_type": "main",
+          "text": "parameters missing\"}]}"
+        }
+      ],
+      "sentimented_concept_list": [],
+      "sentimented_entity_list": [],
+      "text": "parameters missing\"}]}"
+    }
+  ],
+  "sentimented_concept_list": [
+    {
+      "form": "application",
+      "id": "12fbb0dfc7",
+      "score_tag": "NONE",
+      "type": "Top\u003eProduct"
+    }
+  ],
+  "sentimented_entity_list": [
+    {
+      "form": "Key",
+      "id": "280625077d",
+      "score_tag": "NONE",
+      "type": "Top\u003ePerson\u003eLastName"
+    },
+    {
+      "form": "missing.\",\"id\":\"error401_unauthorized_missing_parameters\",\"links\":{\"about\":\"https://docs.aylien.com/newsapi/#authorization\"},\"status\":401,\"title\":\"Authentication",
+      "id": "__14875040786811079038",
+      "score_tag": "NONE",
+      "type": "Top\u003eId\u003eUrl"
+    }
+  ],
+  "status": {
+    "code": "0",
+    "msg": "OK",
+    "credits": "1",
+    "remaining_credits": "19849"
+  },
+  "subjectivity": "SUBJECTIVE"
+}
