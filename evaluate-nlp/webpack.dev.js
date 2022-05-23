@@ -2,16 +2,16 @@ const path = require("path");
 const webpack = require("webpack");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-/* const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
- */
+
 module.exports = {
   entry: "./src/client/index.js",
   mode: "development",
-  /*   optimization: {
-    minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
-  }, */
+  devtool: "source-map",
+  stats: "verbose",
+  output: {
+    libraryTarget: "var",
+    library: "Client",
+  },
   output: {
     libraryTarget: "var",
     library: "Client",

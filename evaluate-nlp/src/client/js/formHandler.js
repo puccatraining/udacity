@@ -1,60 +1,45 @@
-import { request } from "express";
+import { urlChecker } from "./urlChecker";
 
-function handleSubmit(event) {
+async function handleSubmit(event) {
   event.preventDefault();
 
   // check what text was put into the form field
-  const formText = document.getElementById("name").value;
-  console.log("formText = ", formText);
+  let formText = document.getElementById("name").value;
+  Client.checkForName(formText);
 
-  //Client.checkForName(formText);
-  //if (Client.validateURL(formText)) {
-  //  console.log("::: Form Submitted :::");
-  //}
-
-  if (Client.validateURL(formText)) {
-    console.log("::: Form Submitted :::");
-    fetch("http://localhost:8081/serverData", {
+  console.log("::: Form Submitted :::", formText);
+  if (urlChecker(formText)) {
+    await fetch("http://localhost:8081/serverData", {
       method: "POST",
       credentials: "same-origin",
+      mode: "cors",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ url: formText }),
     })
       .then((res) => res.json())
-      .then(function (res) {
-        // update UI.
+      .then((res) => {
+        console.log("formHandler-res", res);
+        updateUI(res);
       });
   } else {
-    alert("Invalid Submission!");
+    alert("Enter valid URL!");
   }
 }
 
-const subBttn = document.getElementById("submit");
-if (subBttn) {
-  subBttn.addEventListener("click", handleSubmit);
+// Update UI
+function updateUI(res) {
+  console.log("I am in updateUI");
+  document.getElementById(
+    "agreement"
+  ).innerHTML = `Agreement: ${res.agreement}`;
+  document.getElementById(
+    "confidence"
+  ).innerHTML = `Confidence: ${res.confidence}`;
+  document.getElementById("irony").innerHTML = `Irony: ${res.irony}`;
+  document.getElementById("model").innerHTML = `Model: ${res.model}`;
+  document.getElementById("score_tag").innerHTML = `Scor Tag: ${res.score_tag}`;
 }
 
-const uiData = async () => {
-  const uiReq = await fetch("http://localhost:8081/serverData");
-  try {
-    const newData = await uiReq.json();
-    console.log("newData = ", newData);
-    // write to index.html
-    document.getElementById(
-      "agreement"
-    ).innerHTML = `Agreement: ${newData.agreement}`;
-    document.getElementById(
-      "confidence"
-    ).innerHTML = `Confidence: ${newData.confidence}`;
-    document.getElementById("irony").innerHTML = `Irony: ${newData.irony}`;
-    document.getElementById("model").innerHTML = `Model: ${newData.model}`;
-    document.getElementById(
-      "score_tag"
-    ).innerHTML = `Score Tag: ${newData.score_tag}`;
-  } catch (error) {
-    console.log("Error: ", error);
-  }
-};
-export { handleSubmit };
+export { handleSubmit, updateUI };

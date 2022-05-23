@@ -8,11 +8,10 @@ const testURL =
 console.log("testURL = ", testURL);
 const serverData = {};
 
-var path = require("path");
+const path = require("path");
 const express = require("express");
 const mockAPIResponse = require("./mockAPI.js");
-var bodyParser = require("body-parser");
-
+const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
 const fetch = require("node-fetch");
@@ -32,9 +31,9 @@ app.use(express.static("dist"));
 
 console.log(__dirname);
 
-// designates what port the app will listen to for incoming requests
-app.listen(8081, function () {
-  console.log("Example app listening on port 8081!");
+app.get("/", function (req, res) {
+  res.sendFile("dist/index.html");
+  //res.sendFile(path.resolve("src/client/views/index.html"));
 });
 
 console.log("mockAPIResponse = ", JSON.stringify(mockAPIResponse));
@@ -42,15 +41,28 @@ app.get("/test", function (req, res) {
   res.json(mockAPIResponse);
 });
 
-app.get("/", function (req, res) {
-  res.sendFile("dist/index.html");
-});
-
-app.get("/serverData", (req, res) => {
-  res.send(serverData);
-});
-
 app.post("/serverData", async (req, res) => {
+  const formUrl = req.body.url;
+  console.log(
+    "url = ",
+    baseURL + "key=" + apiKey + "&url=" + formUrl + "&lang=en"
+  );
+  const url = baseURL + "key=" + apiKey + "&url=" + formUrl + "&lang=en";
+  const mcData = await fetch(url);
+  console.log("*******  mcData = , mcData");
+  try {
+    const rtnData = await mcData.json();
+    res.send(rtnData);
+  } catch (error) {
+    console.log("Error: ", error);
+  }
+});
+
+/* app.get("/serverData", (req, res) => {
+  res.send(serverData);
+}); */
+
+/* app.post("/serverData", async (req, res) => {
   const url = req.body.input;
   console.log("url = ", url);
   console.log("url = ", baseURL + "key=" + apiKey + "&url=" + url + "&lang=en");
@@ -72,4 +84,9 @@ app.post("/serverData", async (req, res) => {
   } catch (error) {
     console.log("error: ", error);
   }
+}); */
+
+// designates what port the app will listen to for incoming requests
+app.listen(8081, function () {
+  console.log("Example app listening on port 8081!");
 });

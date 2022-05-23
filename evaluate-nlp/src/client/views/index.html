@@ -1,58 +1,67 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Test</title>
-    <link href="/styles/resets.scss">
-    <link href="/styles/base.scss">
-    <link href="/styles/header.scss">
-    <link href="/styles/form.scss">
-    <link href="/styles/footer.scss">
-</head>
+    <link href="/styles/resets.scss" />
+    <link href="/styles/base.scss" />
+    <link href="/styles/header.scss" />
+    <link href="/styles/form.scss" />
+    <link href="/styles/footer.scss" />
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <div class="">
-            Logo
-        </div>
-        <div class="">
-            navigation
-        </div>
+      <div class="title">Evaluate A News Alticle with NLP</div>
     </header>
 
     <main>
-        <section>
-            <form class="" onsubmit="return Client.handleSubmit(event)">
-                <input id="name" type="text" name="input" value=""  placeholder="Name">
-                <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)"
-                    onsubmit="return handleSubmit(event)">
-            </form>
-            <section>
-
-                <section>
-                    <strong>Form Results:</strong>
-                    <div id="agreement"></div>
-                    <div id="confidence"></div>
-                    <div id="irony"></div>
-                    <div id="model"></div>
-                    <div id="score_tag"></div>
-                </section>
+      <section>
+        <form class="" onsubmit="return Client.handleSubmit(event)">
+          <label>Enter URL:</label>
+          <input
+            id="name"
+            type="text"
+            name="input"
+            value=""
+            placeholder="Enter URL"
+          />
+          <input
+            type="submit"
+            name="submit"
+            value="SUBMIT"
+            onclick="return Client.handleSubmit(event)"
+            onsubmit="return Client.handleSubmit(event)"
+          />
+          <input type="reset" id="reset" value="RESET" />
+        </form>
+      </section>
+      <section>
+        <label>Form Results:</label>
+        <div id="agreement" class="result"></div>
+        <div id="confidence" class="result"></div>
+        <div id="irony" class="result"></div>
+        <div id="model" class="result"></div>
+        <div id="score_tag" class="result"></div>
+      </section>
     </main>
 
     <footer>
-        <p>This is a footer</p>
+      <p>
+        <span id="copyright"
+          >Copyright 2022 - Dessert Recipes Collection Blog. All Rights
+          Reserved.</span
+        >
+      </p>
     </footer>
     <script>
-        // Check that service workers are supported
-        if ('serviceWorker' in navigator) {
-            // Use the window load event to keep the page load performant
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js');
-            });
-        }
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
     </script>
-</body>
-
+  </body>
 </html>

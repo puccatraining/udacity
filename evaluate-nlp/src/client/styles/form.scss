@@ -1,12 +1,36 @@
 form {
-    border: 1px solid #545454;
-    border-radius: 3px;
-    padding: 40px;
+  border: 2px solid darkslateblue;
+  border-radius: 10px;
+  padding: 40px;
 }
 
 input {
-    padding: 5px 20px;
-    width: 100%;
-    line-height: 16px;
-    margin: 10px 0;
+  padding: 5px 20px;
+  width: 100%;
+  line-height: 16px;
+  margin: 10px 0;
+  font-size: 12pt;
+}
+
+label {
+  font-weight: bold;
+}
+
+.result {
+  font-size: 12pt;
+  font-style: oblique;
+  padding-top: 8px;
+  padding-left: 20px;
+}
+
+input[type="submit"] {
+  background-color: darkslateblue;
+  color: white;
+  font-weight: bold;
+}
+
+input[type="reset"] {
+  background-color: black;
+  color: white;
+  font-weight: bold;
 }
