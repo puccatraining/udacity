@@ -3,9 +3,9 @@ dotenv.config();
 const apiKey = process.env.MC_API_KEY;
 console.log(`MC_API_ID is ${apiKey}`);
 const baseURL = "https://api.meaningcloud.com/sentiment-2.1?";
-const testURL =
+/* const testURL =
   "https://api.meaningcloud.com/sentiment-2.1?key=7b8e66a3a74fc9fed8f5e73fb1a7b2f5&url=https://api.aylien.com/api/v1/classify&lang=en";
-console.log("testURL = ", testURL);
+console.log("testURL = ", testURL); */
 const serverData = {};
 
 const path = require("path");
@@ -57,34 +57,6 @@ app.post("/serverData", async (req, res) => {
     console.log("Error: ", error);
   }
 });
-
-/* app.get("/serverData", (req, res) => {
-  res.send(serverData);
-}); */
-
-/* app.post("/serverData", async (req, res) => {
-  const url = req.body.input;
-  console.log("url = ", url);
-  console.log("url = ", baseURL + "key=" + apiKey + "&url=" + url + "&lang=en");
-  const resData = await fetch(testURL);
-  console.log("resData = ", resData);
-  try {
-    const mcData = await resData.json();
-    console.log(mcData);
-    const nlpData = {
-      agreement: mcData.agreement,
-      confidence: mcData.confidence,
-      irony: mcData.irony,
-      model: mcData.model,
-      score_tag: mcData.score_tag,
-    };
-    serverData = nlpData;
-    console.log("serverData = ", serverData);
-    res.send(serverData);
-  } catch (error) {
-    console.log("error: ", error);
-  }
-}); */
 
 // designates what port the app will listen to for incoming requests
 app.listen(8081, function () {
