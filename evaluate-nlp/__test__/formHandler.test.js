@@ -1,3 +1,4 @@
+import "@babel/polyfill";
 import { formHandler } from "../src/client/js/formHandler";
 
 describe("Testing the formHandler ", () => {

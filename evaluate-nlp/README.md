@@ -2,7 +2,8 @@
 
 The goal for this project is to build a website that use Natural Language Processing(NPL) to evaluate news article via the URL address of the article.
 
-### Technologies used
+### Technologies use:
+
 - HTML
 - CSS
 - dotenv version 10.0.0
@@ -16,15 +17,21 @@ The goal for this project is to build a website that use Natural Language Proces
 - workbox-webpack-plugin version 6.4.2
 
 ### Start the Project
-- Development: 
+
+- Development:
+
 ```
 npm run build-dev
 ```
-- Production: 
+
+- Production:
+
 ```
 npm run build-prod
 ```
+
 - Start the server:
+
 ```
 npm run start
 ```
