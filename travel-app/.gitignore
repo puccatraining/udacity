@@ -3,6 +3,5 @@
 dist
 .doc
 .docx
-.env
 node_modules
 
