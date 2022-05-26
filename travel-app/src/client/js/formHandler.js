@@ -44,6 +44,29 @@ function updateUI(res) {
   document.getElementById(
     "img"
   ).innerHTML = `<img src="${res.picture}" alt="${res.tags}" width="460px" >`;
+
+  let btn = document.createElement("button");
+  btn.innerText = "Clear Trip";
+  btn.style.fontSize = "12pt";
+  btn.style.color = "whilte";
+  btn.style.border = "solid 2px black";
+  btn.style.borderRadius = "5px";
+  btn.style.marginTop = "10px";
+  btn.style.padding = "4px";
+  btn.addEventListener("click", () => {
+    clearInf();
+  });
+  document.getElementById("clear").appendChild(btn);
+}
+
+function clearInf() {
+  document.getElementById("city").innerHTML = "";
+  document.getElementById("tripDate").innerHTML = "";
+  document.getElementById("maxTemp").innerHTML = "";
+  document.getElementById("minTemp").innerHTML = "";
+  document.getElementById("precip").innerHTML = "";
+  document.getElementById("img").innerHTML = "";
+  document.getElementById("clear").innerHTML = "";
 }
 
 export { handleSubmit, updateUI };
