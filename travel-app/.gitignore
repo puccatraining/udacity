@@ -1,0 +1,8 @@
+
+# Ignore local project files
+dist
+.doc
+.docx
+.env
+node_modules
+

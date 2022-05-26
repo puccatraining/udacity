@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Fredericka+the+Great&family=Hurricane&family=Open+Sans:wght@300&family=Oswald:wght@200&family=Rancho&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap");
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightgray;
+  font-size: 12pt;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label {
+  text-align: left;
+}
+
+section {
+  width: 100%;
+  margin: 50px auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 20pt;
+  color: darkslateblue;
+  font-weight: bold;
+  line-height: 2em;
+}
+
+#trip {
+  font-size: 12pt;
+}
+
+#img {
+  text-align: center;
+  padding: 20px;
+}
+
+#inf {
+  padding-top: 40px;
+  text-align: left;
+  font-size: 14pt;
+  line-height: 1.4pc;
+}
+
+.triphead {
+  font-weight: bold;
+}
+
+.tripinf {
+  padding-top: 6px;
+  padding-left: 20px;
+}
+#table {
+  background-color: beige;
+}
+
+td {
+  text-align: center;
+  vertical-align: top;
+}
+
+@media screen and (max-width: 740px) {
+  body {
+    width: 100%;
+    margin-left: 10px;
+  }
+
+  section table td tr {
+    display: inline-flex;
+    width: 100%;
+  }
+
+  #table {
+    display: inline-flex;
+    width: 100%;
+  }
+}
