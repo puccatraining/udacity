@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Travel Planner</title>
 </head>
@@ -17,11 +17,11 @@
       <form class="" onsubmit="return Client.handleSubmit(event)">
         <div class="holder location">
           <label for="location">Destination:</label>
-          <input type="text" id="location" placeholder="Enter City" />
+          <input type="text" id="location" class="txtIn" placeholder="Enter City" />
         </div>
         <div class="holder date">
           <label for="date">Departure Date:</label>
-          <input type="date" id="selDate" placeholder="Enter Departure Date" />
+          <input type="date" id="date" class="txtIn" placeholder="Enter Departure Date" />
         </div>
         <input type="submit" name="submit" value="SUBMIT" onclick="return Client.handleSubmit(event)"
           onsubmit="return Client.handleSubmit(event)" />
@@ -29,11 +29,11 @@
       </form>
       <section id="trip">
         <div class="title">Trip Summary:</div>
-        <div id="table">
+        <div id="table"> 
           <table>
-            <tr rowspan="2">
+            <tr>
               <td>
-                <div id="img"></div>
+                <div id="img" class="imgSize"></div>
               </td>
               <td id="inf">
                 <div id="city" class="triphead"></div>
@@ -46,12 +46,12 @@
               </td>
             </tr>
           </table>
-        </div>
+       </div> 
       </section>
     </main>
     <footer>
       <p>
-        <span id="copyright">Copyright 2022 - Dessert Recipes Collection Blog. All Rights
+        <span id="copyright">Copyright 2022 - Travel App. All Rights
           Reserved.</span>
       </p>
     </footer>

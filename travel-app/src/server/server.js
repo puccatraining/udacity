@@ -40,14 +40,13 @@ console.log(__dirname);
 
 app.get("/", function (req, res) {
   res.sendFile("dist/index.html");
-  //res.sendFile(path.resolve("src/client/views/index.html"));
 });
 
 // GeoNames
 app.post("/serverData", async (req, res) => {
   const location = req.body.location;
-  const date = req.body.selDate;
-  console.log("location = ", location);
+  const date = req.body.date;
+  console.log("date = ", date);
 
   const geoUrl =
     "http://api.geonames.org/searchJSON?q=" +
@@ -64,7 +63,8 @@ app.post("/serverData", async (req, res) => {
     geoData = {
       lng: geoJsonData.geonames[0].lng,
       lat: geoJsonData.geonames[0].lat,
-      city: geoJsonData.geonames[0].city_name,
+      //    location: location,
+      //    selDate: selDate,
     };
   } catch (error) {
     console.log("Error: ", error);
@@ -90,7 +90,7 @@ app.post("/serverData", async (req, res) => {
       minTemp: weatherBitJsonData.data[0].min_temp,
       precip: weatherBitJsonData.data[0].precip,
     };
-    //console.log("****** ", weatherData);
+    console.log("****** ", weatherData);
   } catch (error) {
     console.log("Error: ", error);
   }
@@ -102,7 +102,7 @@ app.post("/serverData", async (req, res) => {
     "&q=$" +
     location +
     "&image_type=photo&pretty=true";
-  console.log("picabayUrl = ", picabayUrl);
+  //console.log("picabayUrl = ", picabayUrl);
 
   const pixabayGetData = await fetch(picabayUrl);
   //console.log("*******  pixabayGetData = ", pixabayGetData);
@@ -117,8 +117,10 @@ app.post("/serverData", async (req, res) => {
     console.log("Error: ", error);
   }
 
+  console.log("**** location = ", location);
+  console.log("*** date = ", date);
   serverData = {
-    destination: geoData.city,
+    destination: location,
     date: date,
     temp: weatherData.temp,
     maxTemp: weatherData.maxTemp,

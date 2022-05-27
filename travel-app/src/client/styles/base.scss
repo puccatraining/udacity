@@ -52,28 +52,30 @@ section {
   padding-top: 6px;
   padding-left: 20px;
 }
+
 #table {
   background-color: beige;
+  width: 100%;
 }
 
 td {
   text-align: center;
   vertical-align: top;
+  display: inline-block;
+  padding: 5px;
+  width: auto;
+}
+.imgSize {
+  padding: 5px;
+  width: 100%;
+  height: auto;
 }
 
-@media screen and (max-width: 740px) {
-  body {
+@media screen and (max-width: 600px) {
+  table tr td div #img {
     width: 100%;
-    margin-left: 10px;
   }
-
   section table td tr {
-    display: inline-flex;
-    width: 100%;
-  }
-
-  #table {
-    display: inline-flex;
-    width: 100%;
+    width: auto;
   }
 }

@@ -8,12 +8,12 @@ async function handleSubmit(event) {
 
   // check what text was put into the form field
   const location = document.getElementById("location").value;
-  const selDate = document.getElementById("selDate").value;
+  const date = document.getElementById("date").value;
   console.log("location = ", location);
-  console.log("date = ", selDate);
+  console.log("date = ", date);
 
   console.log("::: Form Submitted :::", location);
-  if (checkValue(location, selDate)) {
+  if (checkValue(location, date)) {
     await fetch("http://localhost:8081/serverData", {
       method: "POST",
       credentials: "same-origin",
@@ -21,7 +21,7 @@ async function handleSubmit(event) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ location: location, date: selDate }),
+      body: JSON.stringify({ location: location, date: date }),
     })
       .then((res) => res.json())
       .then((res) => {
@@ -43,7 +43,7 @@ function updateUI(res) {
   document.getElementById("precip").innerHTML = `Precipitations: ${res.precip}`;
   document.getElementById(
     "img"
-  ).innerHTML = `<img src="${res.picture}" alt="${res.tags}" width="460px" >`;
+  ).innerHTML = `<img src="${res.picture}" alt="${res.tags}" width="360px" >`;
 
   let btn = document.createElement("button");
   btn.innerText = "Clear Trip";
